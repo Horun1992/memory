@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.searchfragment.SearchFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/search_fragment_random_photo"
+        android:layout_width="@dimen/search_fragment_random_photo_size"
+        android:layout_height="@dimen/search_fragment_random_photo_size"
+        android:layout_marginStart="@dimen/btn_dimens"
+        android:layout_marginLeft="@dimen/btn_dimens"
+        android:layout_marginTop="@dimen/more_margin"
+        android:layout_marginEnd="@dimen/btn_dimens"
+        android:layout_marginRight="@dimen/btn_dimens"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/search_fragment_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/edt_dimens"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_fragment_tv" />
+
+    <Button
+        android:id="@+id/search_fragment_searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/btn_dimens"
+        android:layout_marginTop="@dimen/btn_dimens"
+        android:background="@color/colorPrimary"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_fragment_et" />
+
+    <TextView
+        android:id="@+id/search_fragment_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_dimens"
+        android:layout_marginLeft="@dimen/btn_dimens"
+        android:layout_marginTop="@dimen/search_fragment_tv_margin_top"
+        android:text="@string/fragment_search_title_name"
+        android:textSize="@dimen/search_fragment_tv_size"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_fragment_random_photo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

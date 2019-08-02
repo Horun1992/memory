@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.photofragment.PhotoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/photo_fragment_toolBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/photo_fragment_toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/photo_fragment_currentPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_dimens"
+            android:textColor="@color/white"
+            android:textSize="@dimen/page_count_size"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_fragment_nextBtn"
+            app:layout_constraintEnd_toStartOf="@+id/photo_fragment_nextBtn"
+            app:layout_constraintTop_toTopOf="@+id/photo_fragment_nextBtn" />
+
+        <ImageView
+            android:id="@+id/photo_fragment_nextBtn"
+            android:layout_width="@dimen/photo_fragment_prevBtn_size"
+            android:layout_height="@dimen/photo_fragment_prevBtn_size"
+            android:layout_marginEnd="@dimen/btn_dimens"
+            android:layout_marginRight="@dimen/btn_dimens"
+            android:src="@drawable/ic_skip_next_black_24dp"
+            app:layout_constraintEnd_toEndOf="@+id/photo_fragment_toolBar"
+            app:layout_constraintTop_toTopOf="@+id/photo_fragment_toolBar" />
+
+        <ImageView
+            android:id="@+id/photo_fragment_prevBtn"
+            android:layout_width="@dimen/photo_fragment_prevBtn_size"
+            android:layout_height="@dimen/photo_fragment_prevBtn_size"
+            android:layout_marginEnd="@dimen/btn_dimens"
+            android:layout_marginRight="@dimen/btn_dimens"
+            android:src="@drawable/ic_skip_previous_black_24dp"
+            app:layout_constraintEnd_toStartOf="@+id/photo_fragment_currentPage"
+            app:layout_constraintTop_toTopOf="@+id/photo_fragment_nextBtn" />
+
+        <TextView
+            android:id="@+id/photo_fragment_totalPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="@dimen/photo_fragment_pageCount_textSize"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/photo_fragment_nextBtn"
+            app:layout_constraintStart_toStartOf="@+id/photo_fragment_prevBtn"
+            app:layout_constraintTop_toBottomOf="@+id/photo_fragment_nextBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photo_fragment_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/recycle_view_single_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_fragment_toolBarLayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
